@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import { BrowserRouter } from "react-router-dom";
 import { AuthProvider } from "./auth";
+import { KiosksProvider } from "./kiosk";
 
 interface ProvidersProps {
   children: ReactNode;
@@ -8,7 +9,9 @@ interface ProvidersProps {
 const Providers = ({ children }: ProvidersProps) => {
   return (
     <BrowserRouter>
-      <AuthProvider>{children}</AuthProvider>
+      <AuthProvider>
+        <KiosksProvider>{children}</KiosksProvider>
+      </AuthProvider>
     </BrowserRouter>
   );
 };
