@@ -19,7 +19,7 @@ const loginschema = yup.object().shape({
     .min(8, "A senha deve conter no mínimo 8 caracteres!")
     .matches(
       /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[$*&@#.])[0-9a-zA-Z$*&@#.]{8,}$/,
-      "A senha deve conter pelo menos uma letra minúscula, uma letra maiúscula, um número e um carácter especial"
+      "Senha fraca"
     ),
 });
 
@@ -46,19 +46,20 @@ const Login = () => {
   return (
     <Styled.BackContainer>
       <Styled.Container>
+        <img src="./imgs/logobemax.png" alt="Logo Bemax" width="200px" />
         <Styled.Form onSubmit={handleSubmit(handleLogin)}>
-          <img src="./imgs/logobemax.png" alt="Logo Bemax" width="200px" />
           <input
             type="text"
             {...register("email")}
             placeholder="Digite seu email..."
           />
+          <p>{errors.email?.message}</p>
           <input
             type="password"
             {...register("password")}
             placeholder="Digite sua senha..."
           />
-          <p>{errors.email?.message || errors.password?.message}</p>
+          <p>{errors.password?.message}</p>
           <button type="submit">Entrar</button>
         </Styled.Form>
       </Styled.Container>
