@@ -50,20 +50,4 @@ export const Form = styled.form`
     color: #ff0000;
     font-size: small;
   }
-  button {
-    width: 100px;
-    height: 32px;
-    background-color: #00d9af;
-    border-radius: 8px;
-    border: none;
-    font-size: small;
-    font-weight: 700;
-
-    :hover {
-      font-weight: 600;
-      background-color: #00bbef;
-      transform: scale(1.05);
-      transition: all, 0.3s;
-    }
-  }
 `;
