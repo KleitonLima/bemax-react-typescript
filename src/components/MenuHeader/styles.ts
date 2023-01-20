@@ -20,8 +20,22 @@ export const Container = styled.div`
 
   img {
     padding-left: 8px;
+    width: 150px;
   }
   div {
-    padding-right: 32px;
+    padding-right: 8px;
+    display: flex;
+
+    p {
+      cursor: pointer;
+      border-radius: 8px;
+      padding: 12px;
+
+      :hover {
+        background-color: #00bbef;
+        transform: scale(1.02);
+        transition: all, 0.5s;
+      }
+    }
   }
 `;

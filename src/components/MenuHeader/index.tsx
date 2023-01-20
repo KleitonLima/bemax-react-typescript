@@ -9,12 +9,19 @@ const MenuHeader = () => {
   return (
     <Styled.BackContainer>
       <Styled.Container>
-        <img src="../imgs/logobemax.png" alt="Logo Bemax" width="200px" />
-        {logged ? (
-          <div onClick={() => navigate("/settings/kiosks")}>Settings</div>
-        ) : (
-          <div onClick={() => navigate("/login")}>Login</div>
-        )}
+        <img src="../imgs/logobemax.png" alt="Logo Bemax" />
+        <div>
+          <p onClick={() => navigate("/")}>Home</p>
+          {!logged ? (
+            <div>
+              <p onClick={() => navigate("/settings/kiosks")}>Settings</p>
+            </div>
+          ) : (
+            <div>
+              <p onClick={() => navigate("/login")}>Login</p>
+            </div>
+          )}
+        </div>
       </Styled.Container>
     </Styled.BackContainer>
   );
