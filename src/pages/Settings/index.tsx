@@ -10,7 +10,6 @@ const Settings = () => {
         <div>
           <h2>+</h2>
           <p>Adicionar quiosque</p>
-          <KioskCard />
         </div>
       </div>
     </div>
