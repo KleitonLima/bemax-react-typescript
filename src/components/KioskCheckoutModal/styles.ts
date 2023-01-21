@@ -1,15 +1,5 @@
 import styled from "styled-components";
 
-export const BackContainer = styled.section`
-  position: fixed;
-  height: 100vh;
-  width: 100vw;
-  background-color: #0009;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
 export const Container = styled.div`
   height: 200px;
   width: 500px;

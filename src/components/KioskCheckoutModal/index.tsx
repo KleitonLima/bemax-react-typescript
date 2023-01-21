@@ -1,4 +1,4 @@
-import { Button } from "../../services/styles/globalStyles";
+import { Button, ModalOverlay } from "../../services/styles/globalStyles";
 import * as Styled from "./styles";
 
 interface KioskCheckoutModalProps {
@@ -8,7 +8,7 @@ const KioskCheckoutModal = ({
   handleShowKioskModal,
 }: KioskCheckoutModalProps) => {
   return (
-    <Styled.BackContainer>
+    <ModalOverlay>
       <Styled.Container>
         <div>
           <img src="./quiosque-icon.png" alt="" width="50px" />
@@ -28,7 +28,7 @@ const KioskCheckoutModal = ({
           <p onClick={handleShowKioskModal}>X</p>
         </Styled.CloseContainerModal>
       </Styled.Container>
-    </Styled.BackContainer>
+    </ModalOverlay>
   );
 };
 
