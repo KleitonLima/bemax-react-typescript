@@ -2,6 +2,7 @@ import { useState } from "react";
 import KioskCard from "../../components/KioskCard";
 import KioskCheckoutModal from "../../components/KioskCheckoutModal";
 import MenuHeader from "../../components/MenuHeader";
+import { Container, Content } from "../../services/styles/globalStyles";
 import * as Styled from "./styles";
 
 const Home = () => {
@@ -12,9 +13,9 @@ const Home = () => {
   };
 
   return (
-    <Styled.Container>
+    <Container>
       <MenuHeader />
-      <Styled.Content>
+      <Content>
         <KioskCard handleShowKioskModal={handleShowKioskModal} />
         <KioskCard handleShowKioskModal={handleShowKioskModal} />
         <KioskCard handleShowKioskModal={handleShowKioskModal} />
@@ -35,11 +36,11 @@ const Home = () => {
         <KioskCard handleShowKioskModal={handleShowKioskModal} />
         <KioskCard handleShowKioskModal={handleShowKioskModal} />
         <KioskCard handleShowKioskModal={handleShowKioskModal} />
-      </Styled.Content>
+      </Content>
       {showKioskModal && (
         <KioskCheckoutModal handleShowKioskModal={handleShowKioskModal} />
       )}
-    </Styled.Container>
+    </Container>
   );
 };
 
