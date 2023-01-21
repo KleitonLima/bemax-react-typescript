@@ -1,7 +1,15 @@
-import { Button } from "../../services/styles/globalStyles";
+import { Button } from "../../assets/styles/globalStyles";
 import * as Styled from "./styles";
 
-const KioskSettingsCard = () => {
+interface KioskSettingsCardProps {
+  handleShowEditModal: () => void;
+  handleShowDeleteModal: () => void;
+}
+
+const KioskSettingsCard = ({
+  handleShowEditModal,
+  handleShowDeleteModal,
+}: KioskSettingsCardProps) => {
   return (
     <Styled.ContainerCard>
       <div>
@@ -17,8 +25,8 @@ const KioskSettingsCard = () => {
         <p>Quantidade: 10</p>
       </div>
       <div>
-        <Button>Editar</Button>
-        <Button>Excluir</Button>
+        <Button onClick={handleShowEditModal}>Editar</Button>
+        <Button onClick={handleShowDeleteModal}>Excluir</Button>
       </div>
     </Styled.ContainerCard>
   );
