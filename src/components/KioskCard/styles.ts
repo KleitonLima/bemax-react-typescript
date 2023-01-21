@@ -8,13 +8,12 @@ export const Container = styled.div`
   cursor: pointer;
   box-shadow: 0px -4px 4px 0px #0004;
   border-radius: 8px;
+  position: relative;
+  top: 0;
+  transition: top ease 1s;
 
   :hover {
-    background-color: #86e1fa;
-    transform: scale(1.05);
-    transition: all, 0.5s;
-    box-shadow: 0 0 2px 0;
-
+    top: -20px;
   }
 
   div {
