@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { Button } from "../../services/styles/globalStyles";
+import { Button } from "../../assets/styles/globalStyles";
 import { Kiosk } from "../../types";
-import KioskCheckoutModal from "../KioskCheckoutModal";
+import KioskCheckoutModal from "../Modals/KioskCheckoutModal";
 import * as Styled from "./styles";
 
 interface KioskCardProps {
