@@ -1,18 +1,30 @@
+import { useState } from "react";
+import { Button } from "../../assets/styles/globalStyles";
 import { Kiosk } from "../../types";
+import KioskCheckoutModal from "../Modals/KioskCheckoutModal";
 import * as Styled from "./styles";
 
 interface KioskCardProps {
-  kiosk: Kiosk;
+  // kiosk: Kiosk;
+  handleShowKioskModal: () => void;
 }
 
-const KioskCard = () => {
+const KioskCard = ({ handleShowKioskModal }: KioskCardProps) => {
   return (
-    <div>
-      <h3>Q1</h3>
-      <h3>R$30,00</h3>
-      <input type="date" />
-      <button>Alugar</button>
-    </div>
+    <Styled.Container onClick={handleShowKioskModal}>
+      <div>
+        <img src="./quiosque-icon.png" alt="" width="50px" />
+      </div>
+      <div>
+        <h3>Q1</h3>
+        <p>
+          Diária <br /> R$30,00
+        </p>
+      </div>
+      <div>
+        <Button size="small">Alugar</Button>
+      </div>
+    </Styled.Container>
   );
 };
 

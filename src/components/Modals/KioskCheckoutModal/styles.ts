@@ -1,30 +1,31 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 300px;
-  height: 100px;
+  height: 200px;
+  width: 500px;
+  background-color: #fff;
   display: flex;
   justify-content: space-around;
-  cursor: pointer;
-  box-shadow: 0px -4px 4px 0px #0004;
   border-radius: 8px;
-  position: relative;
-  top: 0;
-  transition: top ease 1s;
-
-  :hover {
-    top: -20px;
-  }
 
   div {
     display: flex;
+    justify-content: space-around;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
 
+    p,
     h3,
-    p {
-      margin: 8px 0 8px 0;
+    h4 {
+      margin: 0;
     }
+  }
+`;
+
+export const CloseContainerModal = styled.p`
+  cursor: pointer;
+
+  p {
+    margin: 0;
   }
 `;

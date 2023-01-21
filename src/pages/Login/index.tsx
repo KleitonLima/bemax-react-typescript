@@ -5,6 +5,7 @@ import { api } from "../../services";
 import { toast } from "react-hot-toast";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
+import { Button } from "../../assets/styles/globalStyles";
 
 interface LoginData {
   email: string;
@@ -55,12 +56,12 @@ const Login = () => {
           />
           <p>{errors.email?.message}</p>
           <input
-            type="password"
+            type="password" 
             {...register("password")}
             placeholder="Digite sua senha..."
           />
           <p>{errors.password?.message}</p>
-          <button type="submit">Entrar</button>
+          <Button type="submit">Entrar</Button>
         </Styled.Form>
       </Styled.Container>
     </Styled.BackContainer>

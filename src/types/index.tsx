@@ -6,6 +6,7 @@ export interface User {
 
 export interface Kiosk {
   id: string;
+  name: string;
   price: number;
   quantity: number;
   date: Date;
