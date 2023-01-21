@@ -1,44 +1,44 @@
 import { useState } from "react";
 import KioskCard from "../../components/KioskCard";
-import KioskCheckoutModal from "../../components/KioskCheckoutModal";
+import KioskCheckoutModal from "../../components/Modals/KioskCheckoutModal";
 import MenuHeader from "../../components/MenuHeader";
-import { Container, Content } from "../../services/styles/globalStyles";
+import { Container, Content } from "../../assets/styles/globalStyles";
 import * as Styled from "./styles";
 
 const Home = () => {
-  const [showKioskModal, setShowKioskModal] = useState<boolean>(false);
+  const [showCheckoutModal, setShowCheckoutModal] = useState<boolean>(false);
 
-  const handleShowKioskModal = () => {
-    setShowKioskModal(!showKioskModal);
+  const handleShowCheckoutModal = () => {
+    setShowCheckoutModal(!showCheckoutModal);
   };
 
   return (
     <Container>
       <MenuHeader />
       <Content>
-        <KioskCard handleShowKioskModal={handleShowKioskModal} />
-        <KioskCard handleShowKioskModal={handleShowKioskModal} />
-        <KioskCard handleShowKioskModal={handleShowKioskModal} />
-        <KioskCard handleShowKioskModal={handleShowKioskModal} />
-        <KioskCard handleShowKioskModal={handleShowKioskModal} />
-        <KioskCard handleShowKioskModal={handleShowKioskModal} />
-        <KioskCard handleShowKioskModal={handleShowKioskModal} />
-        <KioskCard handleShowKioskModal={handleShowKioskModal} />
-        <KioskCard handleShowKioskModal={handleShowKioskModal} />
-        <KioskCard handleShowKioskModal={handleShowKioskModal} />
-        <KioskCard handleShowKioskModal={handleShowKioskModal} />
-        <KioskCard handleShowKioskModal={handleShowKioskModal} />
-        <KioskCard handleShowKioskModal={handleShowKioskModal} />
-        <KioskCard handleShowKioskModal={handleShowKioskModal} />
-        <KioskCard handleShowKioskModal={handleShowKioskModal} />
-        <KioskCard handleShowKioskModal={handleShowKioskModal} />
-        <KioskCard handleShowKioskModal={handleShowKioskModal} />
-        <KioskCard handleShowKioskModal={handleShowKioskModal} />
-        <KioskCard handleShowKioskModal={handleShowKioskModal} />
-        <KioskCard handleShowKioskModal={handleShowKioskModal} />
+        <KioskCard handleShowKioskModal={handleShowCheckoutModal} />
+        <KioskCard handleShowKioskModal={handleShowCheckoutModal} />
+        <KioskCard handleShowKioskModal={handleShowCheckoutModal} />
+        <KioskCard handleShowKioskModal={handleShowCheckoutModal} />
+        <KioskCard handleShowKioskModal={handleShowCheckoutModal} />
+        <KioskCard handleShowKioskModal={handleShowCheckoutModal} />
+        <KioskCard handleShowKioskModal={handleShowCheckoutModal} />
+        <KioskCard handleShowKioskModal={handleShowCheckoutModal} />
+        <KioskCard handleShowKioskModal={handleShowCheckoutModal} />
+        <KioskCard handleShowKioskModal={handleShowCheckoutModal} />
+        <KioskCard handleShowKioskModal={handleShowCheckoutModal} />
+        <KioskCard handleShowKioskModal={handleShowCheckoutModal} />
+        <KioskCard handleShowKioskModal={handleShowCheckoutModal} />
+        <KioskCard handleShowKioskModal={handleShowCheckoutModal} />
+        <KioskCard handleShowKioskModal={handleShowCheckoutModal} />
+        <KioskCard handleShowKioskModal={handleShowCheckoutModal} />
+        <KioskCard handleShowKioskModal={handleShowCheckoutModal} />
+        <KioskCard handleShowKioskModal={handleShowCheckoutModal} />
+        <KioskCard handleShowKioskModal={handleShowCheckoutModal} />
+        <KioskCard handleShowKioskModal={handleShowCheckoutModal} />
       </Content>
-      {showKioskModal && (
-        <KioskCheckoutModal handleShowKioskModal={handleShowKioskModal} />
+      {showCheckoutModal && (
+        <KioskCheckoutModal handleShowKioskModal={handleShowCheckoutModal} />
       )}
     </Container>
   );
