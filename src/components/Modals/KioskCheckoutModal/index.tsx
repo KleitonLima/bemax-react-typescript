@@ -1,4 +1,4 @@
-import { Button, ModalOverlay } from "../../services/styles/globalStyles";
+import { Button, ModalOverlay } from "../../../assets/styles/globalStyles";
 import * as Styled from "./styles";
 
 interface KioskCheckoutModalProps {
